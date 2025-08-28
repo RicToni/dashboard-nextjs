@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils"; 
 
+import { SideBar } from "@/components/sidebar";
 
 
 const geistSans = Geist({
@@ -32,6 +33,7 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased"          
         )}
       >
+        <SideBar></SideBar>
         {children}
       </body>
     </html>
