@@ -1,4 +1,4 @@
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "../ui/button"
 import Link from "next/link"
 import { Home, HomeIcon, LogOut, Package, PanelBottom, Settings, Settings2, ShoppingBag, User, Users, Users2 } from "lucide-react"
@@ -93,7 +93,7 @@ export function SideBar() {
                                 </Link>
                             </TooltipTrigger>
                             <TooltipContent side="right">
-                                Configurações 
+                                Configurações
                             </TooltipContent>
 
                         </Tooltip>
@@ -104,8 +104,8 @@ export function SideBar() {
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <Link
-                                href="#"
-                                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
+                                    href="#"
+                                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                                 >
                                     <LogOut className="h-5 w-5 text-red-500"></LogOut>
                                 </Link>
@@ -130,7 +130,11 @@ export function SideBar() {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="left" className="sm:max-w-x">
+                            <SheetTitle className=" ml-4 mt-4 text-lg font-semibold mb-4">
+                                Menu
+                            </SheetTitle>
                             <nav className=" p-3 grid gap-6 text-lg font-medium">
+                                <div className="flex flex-row p-2 items-baseline ">
                                 <Link
                                     href='#'
                                     className=" flex h-10 w-10 bg-primary rounded-full text-lg  items-center justify-center text-primary-foreground md:text-base gap-2"
@@ -138,8 +142,11 @@ export function SideBar() {
 
                                     <Package className="h-5 w-5 transition-all" />
                                     <span className="sr-only"> Logo do projeto </span>
+                                    
 
                                 </Link>
+                                <span className="ml-4">Sua empresa aqui:</span>
+                                </div>
                                 <Link
                                     href='#'
                                     className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
